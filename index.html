@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Carelink-bookmarklets/assets/css/style.css?v=106372440f97d074ad4212fdf35c4c0515c708c9">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Velkommen til siden | Carelink-bookmarklets</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Velkommen til siden">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Small scripts for use on carelink temponizer webpage">
+<meta property="og:description" content="Small scripts for use on carelink temponizer webpage">
+<link rel="canonical" href="https://presac.github.io/Carelink-bookmarklets/">
+<meta property="og:url" content="https://presac.github.io/Carelink-bookmarklets/">
+<meta property="og:site_name" content="Carelink-bookmarklets">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Velkommen til siden">
+<script type="application/ld+json">
+{"description":"Small scripts for use on carelink temponizer webpage","url":"https://presac.github.io/Carelink-bookmarklets/","@type":"WebSite","headline":"Velkommen til siden","name":"Carelink-bookmarklets","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Presac/Carelink-bookmarklets">View on GitHub</a>
+
+          <h1 id="project_title">Carelink-bookmarklets</h1>
+          <h2 id="project_tagline">Small scripts for use on carelink temponizer webpage</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="velkommen-til-siden">Velkommen til siden</h2>
+
+<p>På denne side vil der være et par forskellige bookmarlets til at gøre livet lidt nemmere når man skal finde vagter.</p>
+
+<h3 id="hvordan-det-virker">Hvordan det virker</h3>
+
+<p>Træk det bookmarklet du vil have op på din bogmærkelinje. Når du så er inde på https://carelink.temponizer.dk/index.php?page=vikar_vagter kan du klikke på bogmærket for at filtrere listen.</p>
+
+<h3 id="bookmarklets">Bookmarklets</h3>
+
+<a id="bmarklet" href="javascript: (function () {function containsObject(obj, list) {var keys1 = Object.keys(obj);for (let i = 0; i &lt; list.length; i++) {var found = true;for (let key of keys1) {if (obj[key] != list[i][key]) {found = false;break;};};if (found) {return true;};};return false;};var vagter = document.querySelectorAll(“tr[id^=vagtrow_booket_]”);var entries = [];var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf(“extra”) &gt; -1) {if (hideExtra) {y.style.display = “none”;hideExtra = false;};return;};var info = {“dato”:  y.children[0].textContent,”tid”:  y.children[1].textContent,”timer”:  y.children[2].textContent,”uddanelse”:  y.children[3].textContent,”kunde”:  y.children[4].textContent};if (containsObject(info, entries)) {y.style.display = “none”;hideExtra = true;} else {entries.push(info);};}));})();">Carelink duplet fjerner</a>
+
+<a id="bmarklet" href="javascript: (function () {function containsObject(obj, list) {var keys1 = Object.keys(obj);for (let i = 0; i &lt; list.length; i++) {var found = true;for (let key of keys1) {if (obj[key] != list[i][key]) {found = false;break;};};if (found) {return true;};};return false;};var vagter = document.querySelectorAll(“tr[id^=vagtrow_booket_]”);var entries = [];var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf(“extra”) &gt; -1) {if (hideExtra) {y.style.display = “none”;hideExtra = false;};return;};var info = {“dato”:  y.children[0].textContent,”tid”:  y.children[1].textContent,”timer”:  y.children[2].textContent,”uddanelse”:  y.children[3].textContent,”kunde”:  y.children[4].textContent};if (containsObject(info, entries)) {y.style.display = “none”;hideExtra = true;} else {entries.push(info);};}));})();">Carelink duplet fjerner</a>
+
+<a id="bmarklet" href="javascript: (function () {function containsObject(obj, list) {var keys1 = Object.keys(obj);for (let i = 0; i < list.length; i++) {var found = true;for (let key of keys1) {if (obj[key] != list[i][key]) {found = false;break;};};if (found) {return true;};};return false;};var vagter = document.querySelectorAll("tr[id^=vagtrow_booket_]");var entries = [];var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf("extra") > -1) {if (hideExtra) {y.style.display = "none";hideExtra = false;};return;};var info = {"dato":  y.children[0].textContent,"tid":  y.children[1].textContent,"timer":  y.children[2].textContent,"uddanelse":  y.children[3].textContent,"kunde":  y.children[4].textContent};if (containsObject(info, entries) || info["kunde"].includes("Odense") != true) {y.style.display = "none";hideExtra = true;} else {entries.push(info);};}));})();">Carelink Odense duplet fjerner</a>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Carelink-bookmarklets maintained by <a href="https://github.com/Presac">Presac</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  
+
+</body></html>
