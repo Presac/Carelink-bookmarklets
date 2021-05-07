@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## Velkommen til siden
 
-You can use the [editor on GitHub](https://github.com/Presac/Carelink-bookmarklets/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+På denne side vil der være et par forskellige bookmarlets til at gøre livet lidt nemmere når man skal finde vagter.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Hvordan det virker
 
-### Markdown
+Træk det bookmarklet du vil have op på din bogmærkelinje. Når du så er inde på https://carelink.temponizer.dk/index.php?page=vikar_vagter kan du klikke på bogmærket for at filtrere listen.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Bookmarklets
 
-```markdown
-Syntax highlighted code block
+[Carelink duplet fjerner](javascript: (function () {function containsObject(obj, list) {var keys1 = Object.keys(obj);for (let i = 0; i < list.length; i++) {var found = true;for (let key of keys1) {if (obj[key] != list[i][key]) {found = false;break;};};if (found) {return true;};};return false;};var vagter = document.querySelectorAll("tr[id^=vagtrow_booket_]");var entries = [];var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf("extra") > -1) {if (hideExtra) {y.style.display = "none";hideExtra = false;};return;};var info = {"dato":  y.children[0].textContent,"tid":  y.children[1].textContent,"timer":  y.children[2].textContent,"uddanelse":  y.children[3].textContent,"kunde":  y.children[4].textContent};if (containsObject(info, entries)) {y.style.display = "none";hideExtra = true;} else {entries.push(info);};}));})();)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Presac/Carelink-bookmarklets/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[Carelink Odense duplet fjerner](javascript: (function () {function containsObject(obj, list) {var keys1 = Object.keys(obj);for (let i = 0; i < list.length; i++) {var found = true;for (let key of keys1) {if (obj[key] != list[i][key]) {found = false;break;};};if (found) {return true;};};return false;};var vagter = document.querySelectorAll("tr[id^=vagtrow_booket_]");var entries = [];var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf("extra") > -1) {if (hideExtra) {y.style.display = "none";hideExtra = false;};return;};var info = {"dato":  y.children[0].textContent,"tid":  y.children[1].textContent,"timer":  y.children[2].textContent,"uddanelse":  y.children[3].textContent,"kunde":  y.children[4].textContent};if (containsObject(info, entries) || info["kunde"].includes("Odense") != true) {y.style.display = "none";hideExtra = true;} else {entries.push(info);};}));})();)
