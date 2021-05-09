@@ -77,7 +77,7 @@ Når du så er inde på <a href="https://carelink.temponizer.dk/index.php?page=v
 
 <div>
 <p>Hvis du bare vil se alt fra Odense:</p>
-<a id="bmarklet3" href="javascript: (function () {var vagter = document.querySelectorAll("tr[id^=vagtrow_booket_]");var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf("extra") > -1) {if (hideExtra) {y.style.display = "none";hideExtra = false;};return;};var kunde = y.children[4].textContent;if (kunde.includes("Odense") != true) {y.style.display = "none";hideExtra = true;} else {entries.push(info);};}));})();">Kun Odense</a>
+<a id="bmarklet3" href="javascript: (function () {var vagter = document.querySelectorAll('tr[id^=vagtrow_booket_]');var hideExtra = false;Array.from(vagter.forEach(function (y) {if (y.id.indexOf('extra') > -1) {if (hideExtra) {y.style.display = 'none';hideExtra = false;};return;};var kunde = y.children[4].textContent;if (kunde.includes('Odense') != true) {y.style.display = 'none';hideExtra = true;} else {entries.push(info);};}));})();">Kun Odense</a>
 </div>
 
       </section>
